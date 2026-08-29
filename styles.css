@@ -401,7 +401,7 @@ a {
 }
 
 .board-grid-one {
-  grid-template-columns: repeat(2, min(20rem, 100%));
+  grid-template-columns: repeat(auto-fill, minmax(16.5rem, 1fr));
 }
 
 .board-grid li {
