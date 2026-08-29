@@ -5,7 +5,7 @@ const form = document.querySelector(".contact-form");
 const note = document.querySelector(".form-note");
 
 if (year) {
-  year.textContent = String(new Date().getFullYear());
+  year.textContent = "2025";
 }
 
 toggle?.addEventListener("click", () => {
