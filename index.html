@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Beyond Borders</title>
+    <meta
+      name="description"
+      content="Beyond Borders is a national nonprofit organization advancing refugee health through service, advocacy, and research."
+    />
+    <link rel="icon" href="assets/mark.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="wordmark" href="#top">
+          <img class="mark" src="assets/mark.png" alt="" width="48" height="48" />
+          <span>
+            <span class="wm-1">Beyond</span>
+            <span class="wm-2">Borders</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <a href="#work">Approach</a>
+          <a href="#chapters">Network</a>
+          <a href="#involved">Get involved</a>
+          <a class="btn" href="#involved">Donate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Refugee health</p>
+            <h1>Advancing refugee health through service, advocacy, and research.</h1>
+            <p class="lede">
+              Beyond Borders is a national nonprofit organization working to improve
+              access to health, resources, and opportunity for refugee communities.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#involved">Get involved</a>
+              <a class="btn btn-ghost" href="#work">Explore our work</a>
+            </div>
+          </div>
+          <figure class="hero-photo">
+            <img
+              src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80"
+              alt="Volunteers packing donations for community distribution."
+              width="1600"
+              height="1067"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="stats-band" aria-label="Impact">
+        <div class="wrap">
+          <dl class="stats">
+            <div>
+              <dt>1,000+</dt>
+              <dd>Individuals connected to care and resources</dd>
+            </div>
+            <div>
+              <dt>900+</dt>
+              <dd>Essential kits distributed</dd>
+            </div>
+            <div>
+              <dt>$30,000+</dt>
+              <dd>Raised to support refugee-serving initiatives</dd>
+            </div>
+            <div>
+              <dt>National</dt>
+              <dd>Student chapters advancing our mission</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section" id="work">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="eyebrow">Our approach</p>
+            <h2>Three pillars. One mission.</h2>
+          </header>
+          <ul class="pillars">
+            <li>
+              <h3>Service</h3>
+              <p class="pillar-line">Delivering direct, community-based support.</p>
+              <p>We connect refugee families with health screenings, education, essential resources, and care navigation.</p>
+            </li>
+            <li>
+              <h3>Advocacy</h3>
+              <p class="pillar-line">Improving access to systems that shape health.</p>
+              <p>We work to reduce barriers to healthcare, social services, and community resources through outreach, education, and partnership.</p>
+            </li>
+            <li>
+              <h3>Research</h3>
+              <p class="pillar-line">Generating evidence to strengthen refugee health.</p>
+              <p>We study barriers to care and translate findings into more responsive programs, policies, and community interventions.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section why" id="why">
+        <div class="wrap why-grid">
+          <img class="why-mark" src="assets/mark.png" alt="" width="180" height="163" />
+          <div>
+            <p class="eyebrow">Why it matters</p>
+            <h2>Access should not depend on how well someone can navigate an unfamiliar system.</h2>
+            <p class="prose">
+              Refugees often encounter fragmented services, language barriers, and
+              limited access to trusted health information. Beyond Borders works to
+              make care and resources more accessible, understandable, and responsive.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="chapters">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="eyebrow">Our network</p>
+            <h2>A national community of students advancing refugee health.</h2>
+            <p class="prose">
+              Beyond Borders chapters translate our mission into local action through
+              service, advocacy, research, and community partnership.
+            </p>
+          </header>
+
+          <div class="tab-list" role="tablist" aria-label="Chapters">
+            <button type="button" role="tab" id="tab-national" aria-controls="panel-national" aria-selected="true" data-entity="national">National Board</button>
+            <button type="button" role="tab" id="tab-ucla" aria-controls="panel-ucla" aria-selected="false" tabindex="-1" data-entity="ucla">UCLA</button>
+            <button type="button" role="tab" id="tab-usc" aria-controls="panel-usc" aria-selected="false" tabindex="-1" data-entity="usc">USC</button>
+            <button type="button" role="tab" id="tab-hs" aria-controls="panel-hs" aria-selected="false" tabindex="-1" data-entity="hs">High school</button>
+          </div>
+
+          <div class="entity-panel" role="tabpanel" id="panel-national" aria-labelledby="tab-national">
+            <ul class="board-grid board-grid-one">
+              <li>
+                <p class="board-office">Founder and President</p>
+                <p class="board-name">Sasha Gladkikh</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="entity-panel" role="tabpanel" id="panel-ucla" aria-labelledby="tab-ucla" hidden>
+            <p class="ig"><a href="https://www.instagram.com/beyondbordersucla/" target="_blank" rel="noopener noreferrer">@beyondbordersucla</a></p>
+            <ul class="board-grid">
+              <li>
+                <p class="board-office">President</p>
+                <p class="board-name"></p>
+              </li>
+              <li>
+                <p class="board-office">Vice President</p>
+                <p class="board-name"></p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="entity-panel" role="tabpanel" id="panel-usc" aria-labelledby="tab-usc" hidden>
+            <p class="ig"><a href="https://www.instagram.com/beyondbordersusc/" target="_blank" rel="noopener noreferrer">@beyondbordersusc</a></p>
+            <ul class="board-grid">
+              <li>
+                <p class="board-office">President</p>
+                <p class="board-name"></p>
+              </li>
+              <li>
+                <p class="board-office">Vice President</p>
+                <p class="board-name"></p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="entity-panel" role="tabpanel" id="panel-hs" aria-labelledby="tab-hs" hidden>
+            <p class="prose">High school chapters introduce students to community service, health equity, and responsible nonprofit leadership.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section involved" id="involved">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="eyebrow">Get involved</p>
+            <h2>Contribute where your skills can have the greatest impact.</h2>
+          </header>
+          <ul class="paths">
+            <li>
+              <h3>Join</h3>
+              <p>Service, advocacy, research, fundraising, chapter leadership, or community engagement.</p>
+            </li>
+            <li>
+              <h3>Start a chapter</h3>
+              <p>Build sustained, community-centered programming with refugee-serving organizations in your region.</p>
+            </li>
+            <li>
+              <h3>Partner</h3>
+              <p>We work with resettlement agencies, clinics, universities, schools, and community organizations.</p>
+            </li>
+            <li>
+              <h3>Donate</h3>
+              <p>Support community health initiatives, education, essential resources, research, and student-led programming.</p>
+            </li>
+          </ul>
+          <form class="contact-form" name="interest" method="post" action="#">
+            <label>
+              Name
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>
+              I am interested in
+              <select name="intent" required>
+                <option value="" disabled selected>Select one</option>
+                <option value="join">Joining a chapter</option>
+                <option value="start">Starting a chapter</option>
+                <option value="partner">Partnership</option>
+                <option value="support">Supporting our work</option>
+              </select>
+            </label>
+            <label>
+              Chapter or campus
+              <select name="chapter">
+                <option value="" disabled selected>Select one</option>
+                <option value="ucla">UCLA</option>
+                <option value="usc">USC</option>
+                <option value="high-school">High school</option>
+                <option value="new">New chapter</option>
+              </select>
+            </label>
+            <label class="span-2">
+              School, if not listed
+              <input type="text" name="school" autocomplete="organization" />
+            </label>
+            <label class="span-2">
+              Message
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <div class="span-2">
+              <button class="btn" type="submit">Submit</button>
+              <p class="form-note" role="status" hidden></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <a class="wordmark" href="#top">
+          <img class="mark" src="assets/mark.png" alt="" width="40" height="40" />
+          <span>
+            <span class="wm-1">Beyond</span>
+            <span class="wm-2">Borders</span>
+          </span>
+        </a>
+        <p>A national nonprofit advancing refugee health through service, advocacy, and research.</p>
+        <p class="legal">© <span id="year"></span> Beyond Borders. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
