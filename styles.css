@@ -503,6 +503,14 @@ a {
   color: var(--heart);
 }
 
+.honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .site-footer {
   background: var(--navy);
   color: rgba(255, 255, 255, 0.78);

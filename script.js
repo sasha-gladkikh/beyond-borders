@@ -21,12 +21,10 @@ nav?.querySelectorAll("a").forEach((link) => {
   });
 });
 
-form?.addEventListener("submit", (event) => {
-  event.preventDefault();
+form?.addEventListener("submit", () => {
   if (!note) return;
   note.hidden = false;
-  note.textContent = "Thank you. We will follow up by email.";
-  form.reset();
+  note.textContent = "Sending…";
 });
 
 const tabs = [...document.querySelectorAll('[role="tab"]')];
