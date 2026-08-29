@@ -182,8 +182,13 @@ a {
   color: var(--navy);
 }
 
-.hero {
-  padding: 3rem 0 0;
+.thanks {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+
+.thanks h1 {
+  max-width: 18ch;
 }
 
 .hero-grid {

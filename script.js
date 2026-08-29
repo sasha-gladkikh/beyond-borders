@@ -21,10 +21,25 @@ nav?.querySelectorAll("a").forEach((link) => {
   });
 });
 
-form?.addEventListener("submit", () => {
-  if (!note) return;
-  note.hidden = false;
-  note.textContent = "Sending…";
+form?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  if (note) {
+    note.hidden = false;
+    note.textContent = "Sending…";
+  }
+  try {
+    const response = await fetch("https://formsubmit.co/ajax/beyondbordersucla@gmail.com", {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    });
+    if (!response.ok) throw new Error("Request failed");
+    window.location.href = "thank-you.html";
+  } catch {
+    if (note) {
+      note.textContent = "Something went wrong. Please email beyondbordersucla@gmail.com.";
+    }
+  }
 });
 
 const tabs = [...document.querySelectorAll('[role="tab"]')];
