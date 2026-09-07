@@ -347,7 +347,12 @@ a {
 
 .tab-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
   border-bottom: 1px solid var(--line);
   margin: 0 0 1.4rem;
 }
@@ -363,6 +368,8 @@ a {
   font-weight: 700;
   color: var(--muted);
   cursor: pointer;
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 .tab-list [role="tab"][aria-selected="true"] {
