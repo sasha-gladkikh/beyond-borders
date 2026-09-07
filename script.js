@@ -5,7 +5,7 @@ const form = document.querySelector(".contact-form");
 const note = document.querySelector(".form-note");
 
 if (year) {
-  year.textContent = "2025";
+  year.textContent = "2026";
 }
 
 toggle?.addEventListener("click", () => {
@@ -42,23 +42,24 @@ form?.addEventListener("submit", async (event) => {
   }
 });
 
-const tabs = [...document.querySelectorAll('[role="tab"]')];
-const panels = [...document.querySelectorAll('[role="tabpanel"]')];
+const orgList = document.querySelector('[data-level="org"]');
+const orgTabs = [...(orgList?.querySelectorAll('[role="tab"]') || [])];
+const orgPanels = ["national", "university", "hs"].map((id) => document.getElementById(`panel-${id}`));
 
-function showEntity(id) {
-  tabs.forEach((tab) => {
+function showOrg(id) {
+  orgTabs.forEach((tab) => {
     const selected = tab.dataset.entity === id;
     tab.setAttribute("aria-selected", String(selected));
     tab.tabIndex = selected ? 0 : -1;
   });
-  panels.forEach((panel) => {
-    panel.hidden = panel.id !== `panel-${id}`;
+  orgPanels.forEach((panel) => {
+    if (panel) panel.hidden = panel.id !== `panel-${id}`;
   });
 }
 
-tabs.forEach((tab, index) => {
+orgTabs.forEach((tab, index) => {
   tab.addEventListener("click", () => {
-    showEntity(tab.dataset.entity);
+    showOrg(tab.dataset.entity);
     history.replaceState(null, "", `#${tab.dataset.entity}`);
   });
   tab.addEventListener("keydown", (event) => {
@@ -66,15 +67,18 @@ tabs.forEach((tab, index) => {
     event.preventDefault();
     const next =
       event.key === "ArrowRight"
-        ? tabs[(index + 1) % tabs.length]
-        : tabs[(index - 1 + tabs.length) % tabs.length];
+        ? orgTabs[(index + 1) % orgTabs.length]
+        : orgTabs[(index - 1 + orgTabs.length) % orgTabs.length];
     next.focus();
     next.click();
   });
 });
 
-const entityFromHash = window.location.hash.replace("#", "");
-if (["national", "ucla", "usc", "hs"].includes(entityFromHash)) {
-  showEntity(entityFromHash);
+const hash = window.location.hash.replace("#", "");
+if (hash === "ucla" || hash === "usc" || hash === "university") {
+  showOrg("university");
+  document.getElementById("chapters")?.scrollIntoView();
+} else if (["national", "hs"].includes(hash)) {
+  showOrg(hash);
   document.getElementById("chapters")?.scrollIntoView();
 }

@@ -370,6 +370,35 @@ a {
   border-bottom-color: var(--heart);
 }
 
+.tab-list-campus {
+  margin-top: 0.1rem;
+}
+
+.tab-list-campus [role="tab"] {
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 0.55rem 0.9rem;
+}
+
+.campus-block {
+  padding-bottom: 0.5rem;
+}
+
+.campus-block-usc {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.campus-heading {
+  margin: 0 0 0.65rem;
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  color: var(--navy);
+}
+
 .ig {
   margin: 0 0 1rem;
   font-weight: 600;
