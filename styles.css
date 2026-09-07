@@ -570,6 +570,10 @@ a {
 }
 
 @media (max-width: 900px) {
+  .hero {
+    padding-top: 1.65rem;
+  }
+
   .hero-grid,
   .why-grid,
   .recognition-grid,
