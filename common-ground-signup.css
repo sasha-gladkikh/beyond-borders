@@ -1,0 +1,25 @@
+.cg-signup-page{max-width:1160px;margin:65px auto 80px;padding:0 35px;display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:start;color:#26364b}
+.cg-signup-intro h1{font:400 clamp(44px,5.5vw,72px)/1.04 Georgia,serif;letter-spacing:-.04em;margin:20px 0 26px}
+.cg-signup-intro h1 em{color:#344eb9;font-weight:400}
+.cg-signup-deck{font-size:19px;line-height:1.7;max-width:44ch;color:#52617a}
+.cg-signup-promises{list-style:none;padding:0;margin:32px 0}
+.cg-signup-promises li{border-top:1px solid #d7dce3;padding:18px 0;margin:0}
+.cg-signup-promises strong{display:block;font:400 22px Georgia,serif}
+.cg-signup-promises span{display:block;font-size:15px;color:#52617a;margin-top:7px;line-height:1.6}
+.cg-signup-browse{color:#344eb9;font-size:14px;text-underline-offset:5px}
+.cg-signup-panel{background:#edf0f6;border-top:3px solid #344eb9;padding:32px}
+.cg-signup-panel h2{font:400 32px/1.2 Georgia,serif;letter-spacing:-.025em;margin:12px 0}
+.cg-signup-panel>p{font-size:16px;line-height:1.65;color:#52617a}
+#newsletter-form{margin-top:26px}
+#newsletter-form>label:first-of-type{display:block;font-size:14px;font-weight:600;margin-bottom:8px}
+#newsletter-email{box-sizing:border-box;width:100%;border:1px solid #a9b6ca;background:#fff;padding:14px;font:16px Arial,sans-serif;border-radius:3px;color:#26364b}
+.cg-signup-consent{display:flex;gap:11px;align-items:start;font-size:13px;line-height:1.65;margin:18px 0}
+.cg-signup-consent input{width:18px;height:18px;flex-shrink:0;margin-top:2px;accent-color:#344eb9}
+#newsletter-form button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:12px;border:0;background:#263f70;color:white;padding:15px 18px;font:600 14px Manrope,Arial,sans-serif;border-radius:3px;cursor:pointer}
+#newsletter-form button:disabled{opacity:.65;cursor:wait}
+#newsletter-status{font-size:14px;line-height:1.7;margin:14px 0 0;overflow-wrap:anywhere}
+.cg-signup-panel .cg-signup-note{font-size:12px;line-height:1.7;margin:24px 0 14px}
+.cg-signup-panel .cg-signup-contact{font-size:13px}
+.cg-signup-contact a{color:#263f70;text-underline-offset:3px}
+#newsletter-form input:focus-visible{outline:3px solid #516cc5;outline-offset:3px}
+@media(max-width:800px){.cg-signup-page{grid-template-columns:1fr;gap:32px;margin:35px auto 50px;padding:0 22px}.cg-signup-panel{padding:25px}.cg-signup-intro h1{font-size:50px}}

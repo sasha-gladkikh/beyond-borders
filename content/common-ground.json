@@ -41,6 +41,8 @@
     "signupUrl": null,
     "heading": "Get new Common Ground stories by email.",
     "description": "Research, perspectives, and visual stories on displacement and health.",
-    "note": "Connect a hosted signup page before displaying this section. Do not promise a publication schedule until confirmed."
+    "note": "Signup requests use the existing FormSubmit inbox. Automated mailing-list enrollment and newsletter delivery are not configured.",
+    "landingPage": "common-ground-signup.html",
+    "mode": "inbox-request"
   }
 }
