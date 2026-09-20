@@ -20,8 +20,8 @@
     },
     {
       "id": "resettlement",
-      "title": "Arrival is only the beginning",
-      "summary": "An interactive map of the strengths people bring, the conditions they encounter, and the connections that can support health.",
+      "title": "An appointment is only the beginning",
+      "summary": "One appointment. Everything it can take to get there. An animated journey through the practical steps between a referral and access to care.",
       "author": "Rashad Charif",
       "date": "2026-09-20",
       "format": "Visual essay",
@@ -29,10 +29,10 @@
         "Displacement",
         "Health systems"
       ],
-      "readingMinutes": 4,
+      "readingMinutes": 3,
       "url": "journal-resettlement.html",
       "image": "assets/common-ground-resettlement.svg",
-      "imageAlt": "A network connecting skills, identity, housing, language access, care and community support.",
+      "imageAlt": "An appointment card surrounded by the practical questions of understanding instructions, making time and planning the journey.",
       "featured": true,
       "status": "published"
     }
