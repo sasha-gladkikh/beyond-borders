@@ -1,0 +1,22 @@
+{
+  "articles": [
+    {
+      "id": "digital-access",
+      "title": "When digital access becomes a barrier to care",
+      "summary": "An appointment exists online. Can everyone reach it? Examining the distance between offering healthcare and making it accessible.",
+      "author": "Sasha Gladkikh",
+      "date": "2026-09-19",
+      "format": "Research commentary",
+      "topics": [
+        "Health systems",
+        "Digital access"
+      ],
+      "readingMinutes": 4,
+      "url": "journal-digital-access.html",
+      "image": "assets/common-ground-digital-access.svg",
+      "imageAlt": "Editorial illustration of an online appointment window and an interrupted route to care.",
+      "featured": true,
+      "status": "published"
+    }
+  ]
+}

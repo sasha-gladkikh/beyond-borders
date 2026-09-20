@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Beyond Borders</title>
+    <title>Beyond Borders | Advancing Refugee Health</title>
     <meta
       name="description"
       content="Beyond Borders is a national 501(c)(3) nonprofit expanding access to healthcare and essential resources for refugee communities."
@@ -12,10 +12,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=5" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="styles.css?v=39" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -38,8 +39,9 @@
         <nav id="site-nav" class="site-nav" aria-label="Primary">
           <a href="#work">Our Work</a>
           <a href="#chapters">Our Network</a>
+          <a href="journal.html">Common Ground</a>
           <a href="#involved">Get Involved</a>
-          <a class="btn" href="#involved">Donate</a>
+          <a class="btn" href="#giving">Support our work</a>
         </nav>
       </div>
     </header>
@@ -49,41 +51,54 @@
         <div class="wrap hero-grid">
           <div class="hero-copy">
             <p class="eyebrow">Refugee health</p>
-            <h1>Advancing refugee health through service, advocacy, and research.</h1>
+            <h1>Health has<br /><span class="hero-emphasis">no borders.</span></h1>
             <p class="lede">
               Beyond Borders is a national 501(c)(3) nonprofit expanding access
               to healthcare and essential resources for refugee communities.
+              We bring students, healthcare professionals, and community partners
+              together through service, advocacy, and research.
             </p>
             <div class="hero-actions">
               <a class="btn" href="#involved">Get involved</a>
               <a class="btn btn-ghost" href="#work">Explore our work</a>
             </div>
           </div>
-          <figure class="hero-photo">
-            <img
-              src="assets/kit.png"
-              alt="A Beyond Borders hygiene kit packed with travel-size toiletries, first-aid supplies, and health items."
-              width="660"
-              height="677"
-            />
-          </figure>
+          <div class="hero-collage" aria-label="Beyond Borders volunteers, community events, and essential supplies">
+            <div class="collage-shape" aria-hidden="true"></div>
+            <figure class="collage-photo collage-community">
+              <a href="assets/altadena-community-clean-ground.jpg" data-lightbox data-caption="Altadena Community Health Fair · May 16, 2026" aria-label="Enlarge the Altadena community photo"><img src="assets/altadena-community-clean-ground.jpg" alt="Beyond Borders volunteers and community partners at the Altadena health fair." width="1003" height="569" fetchpriority="high" /></a>
+              <figcaption>In the community</figcaption>
+            </figure>
+            <figure class="collage-photo collage-packing">
+              <a href="assets/volunteers-packing-light.jpg" data-lightbox data-caption="Beyond Borders volunteers preparing health and hygiene kits" aria-label="Enlarge the volunteer packing photo"><img src="assets/volunteers-packing-light.jpg" alt="Student volunteers preparing boxes of Beyond Borders hygiene kits." width="1280" height="1920" /></a>
+
+            </figure>
+            <button class="kit-explore" type="button" aria-haspopup="dialog">Inside a hygiene kit <span aria-hidden="true">＋</span></button>
+            <img class="collage-kit" src="assets/kit-current-logo-retouched.png" alt="A health and hygiene kit, shown with updated Beyond Borders branding." width="1254" height="1254" />
+
+          </div>
         </div>
       </section>
 
       <section class="stats-band" aria-label="Impact">
         <div class="wrap">
+          <p class="impact-label">Our collective impact</p>
           <dl class="stats">
             <div>
               <dt>1,000+</dt>
               <dd>People connected to healthcare and essential services</dd>
             </div>
             <div>
-              <dt>1,000+</dt>
+              <dt>1,100+</dt>
               <dd>Health and hygiene kits distributed</dd>
             </div>
             <div>
               <dt>$50,000+</dt>
               <dd>Mobilized for refugee-serving programs</dd>
+            </div>
+            <div>
+              <dt>70+</dt>
+              <dd>Active student volunteers</dd>
             </div>
           </dl>
         </div>
@@ -95,60 +110,130 @@
             <p class="eyebrow">Our Work</p>
             <h2>Three ways we advance refugee health.</h2>
           </header>
+          <nav class="pillar-nav" aria-label="Explore our pillars"><a href="#service">Service</a><a href="#advocacy">Advocacy</a><a href="#research">Research</a></nav>
           <ul class="pillars">
             <li>
-              <h3>Service</h3>
-              <p class="pillar-line">Meet immediate needs.</p>
-              <p>We connect people with care, essential resources, and trusted support.</p>
+              <div class="pillar-heading"><span class="pillar-number">01</span><h3 id="service">Service</h3><ul class="pillar-summary" aria-label="Service focus areas"><li>Health fairs</li><li>Resource navigation</li><li>Essential supplies</li></ul></div>
+              <p>
+                We spearhead community health and resource fairs that connect
+                refugee families with preventive screenings, multilingual health
+                education, health insurance enrollment support, and referrals for
+                continued care. Working alongside healthcare professionals and
+                community organizations, our volunteers coordinate outreach, event
+                operations, and resource navigation. Beyond the fairs, we organize
+                digital health workshops to help families navigate clinics, patient
+                portals, and appointments, and lead essential supply drives guided
+                by the needs our community partners identify.
+              </p>
             </li>
             <li>
-              <h3>Advocacy</h3>
-              <p class="pillar-line">Expand access.</p>
-              <p>We address barriers to healthcare, information, and essential services.</p>
+              <div class="pillar-heading"><span class="pillar-number">02</span><h3 id="advocacy">Advocacy</h3><ul class="pillar-summary" aria-label="Advocacy focus areas"><li>Youth education</li><li>Community perspectives</li><li>Healthcare access</li></ul></div>
+              <p>
+                We build understanding of displacement and mobilize support for
+                refugee communities through high school presentations, public
+                education, and community engagement. Our outreach examines the
+                barriers families face when rebuilding their lives in Los Angeles,
+                including language, transportation, and the cost of care, and
+                connects students with concrete opportunities to help. We are
+                expanding this work through community-led panels, photography
+                exhibits, and focused healthcare access campaigns that bring
+                refugee perspectives into public dialogue and encourage
+                institutional action.
+              </p>
             </li>
             <li>
-              <h3>Research</h3>
-              <p class="pillar-line">Improve what works.</p>
-              <p>We study barriers to care and use evidence to strengthen programs and partnerships.</p>
+              <div class="pillar-heading"><span class="pillar-number">03</span><h3 id="research">Research</h3><ul class="pillar-summary" aria-label="Research focus areas"><li>Needs assessments</li><li>Evidence reviews</li><li>Program evaluation</li></ul></div>
+              <p>
+                We connect student scholarship with the health priorities of
+                refugee communities. Building on our displacement research
+                showcase, we are developing faculty-mentored needs assessments and
+                health-fair evaluations to understand barriers to care, identify
+                unmet needs, and strengthen our programs. Our research agenda also
+                includes literature reviews and evidence briefs examining refugee
+                health and social disparities. Through research showcases, we bring
+                students, faculty, and community partners together to share
+                findings and translate knowledge into more responsive services.
+              </p>
             </li>
           </ul>
         </div>
       </section>
 
       <section class="section why" id="why">
-        <div class="wrap why-grid">
-          <img class="why-mark" src="assets/mark.png" alt="" width="180" height="163" />
-          <div>
-            <p class="eyebrow">Why It Matters</p>
-            <h2>Access should be simple, clear, and equitable.</h2>
-            <p class="prose">
-              Refugee communities often face language barriers, unfamiliar systems,
-              and fragmented services.
-            </p>
-            <p class="prose">
-              Beyond Borders helps make care easier to access and navigate.
-            </p>
+        <div class="wrap access-grid">
+          <div><p class="eyebrow">Why it matters</p><h2>Care begins with access. It continues with support.</h2><p class="prose">We work alongside community partners to help families navigate barriers to care after displacement.</p></div>
+          <div class="access-paths"><div class="access-labels"><span>Barriers families face</span><span>How we respond</span></div>
+            <div class="access-row"><span>Unfamiliar healthcare systems</span><span aria-hidden="true">→</span><strong>Resource navigation</strong></div>
+            <div class="access-row"><span>Fragmented services</span><span aria-hidden="true">→</span><strong>Referrals for continued care</strong></div>
+            <div class="access-row"><span>Language barriers</span><span aria-hidden="true">→</span><strong>Multilingual health education</strong></div>
           </div>
+        </div>
+      </section>
+
+<section class="section fair-walkthrough" id="health-fair" aria-labelledby="fair-title"><div class="wrap">
+<header class="section-head"><p class="eyebrow">Inside a community health fair</p><h2 id="fair-title">One day. Many points of connection.</h2><p class="prose">Explore a typical participant journey, from a welcome at the entrance to a plan for continued care.</p></header>
+<div class="fair-stations" role="tablist" aria-label="Health fair stations">
+<button type="button" role="tab" id="fair-tab-0" aria-controls="fair-panel" aria-selected="true" tabindex="0" data-fair-step="0"><span>01</span>Welcome</button><button type="button" role="tab" id="fair-tab-1" aria-controls="fair-panel" aria-selected="false" tabindex="-1" data-fair-step="1"><span>02</span>Screening</button><button type="button" role="tab" id="fair-tab-2" aria-controls="fair-panel" aria-selected="false" tabindex="-1" data-fair-step="2"><span>03</span>Navigation</button><button type="button" role="tab" id="fair-tab-3" aria-controls="fair-panel" aria-selected="false" tabindex="-1" data-fair-step="3"><span>04</span>Resources</button><button type="button" role="tab" id="fair-tab-4" aria-controls="fair-panel" aria-selected="false" tabindex="-1" data-fair-step="4"><span>05</span>Next steps</button></div><div class="fair-panel" id="fair-panel" role="tabpanel" aria-labelledby="fair-tab-0" tabindex="0"><div class="fair-image"><img id="fair-photo" src="assets/altadena-community-clean-ground.jpg" alt="Student volunteers, physicians, and community partners at a health fair." loading="lazy"/><span id="fair-stage">01 / 05</span></div><div class="fair-copy"><p class="eyebrow" id="fair-kicker">A place to begin</p><h3 id="fair-heading">A welcome that makes the next step clear.</h3><p id="fair-description">Volunteers explain the available services, ask about language preferences, and help participants choose where to begin. Participation is voluntary.</p><div class="fair-role"><span>Who helps</span><p id="fair-team">Student volunteers and community partners</p></div><div class="fair-role"><span>The connection</span><p id="fair-result">A clear introduction to the services and people available.</p></div><div class="fair-controls"><button type="button" id="fair-prev" disabled aria-label="Previous station">← Back</button><p id="fair-progress" aria-live="polite">Station 1 of 5</p><button type="button" id="fair-next">Next station →</button></div></div></div><p class="fair-note">Illustrative event model. Services vary by event and partner availability; referral follow-up is a program-development priority.</p><noscript><p>The journey continues through screening, health insurance navigation, essential resources, and planning for continued care.</p></noscript></div></section>
+      <section class="section event-section" id="events" aria-labelledby="events-heading">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="eyebrow">Our work in action</p>
+            <h2 id="events-heading">Our commitment in practice.</h2>
+            <p class="prose">Through community screenings and health fairs, we bring our mission into the communities we serve.</p>
+          </header>
+          <ol class="event-list" aria-label="Community events, newest first">
+            <li>
+              <p class="event-date"><span class="timeline-year">2026</span><time datetime="2026-05-16">May 16</time></p>
+              <div><h3>Altadena Community Health Fair</h3>
+                <p class="event-location">1879 N Lake Ave, Altadena, California</p><a class="event-photo-link" href="assets/altadena-community-clean-ground.jpg" data-gallery="altadena" data-lightbox data-caption="Altadena Community Health Fair · May 16, 2026">Explore the day ↗</a>
+                <details class="event-map"><summary>View location on map</summary>
+                  <iframe title="Map: Altadena Community Health Fair" src="https://maps.google.com/maps?q=1879%20N%20Lake%20Ave%2C%20Altadena%2C%20CA&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                  <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=1879%20N%20Lake%20Ave%2C%20Altadena%2C%20CA" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a>
+                </details>
+              </div>
+            </li>
+            <li>
+              <p class="event-date"><time datetime="2026-04-27">April 27</time> to <time datetime="2026-05-10">May 10</time></p>
+              <div><h3>UCLA Displacement Health Fair</h3>
+                <p class="event-location">University of California, Los Angeles</p>
+                <details class="event-map"><summary>View location on map</summary>
+                  <iframe title="Map: UCLA Displacement Health Fair" src="https://maps.google.com/maps?q=University%20of%20California%20Los%20Angeles&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                  <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=University%20of%20California%20Los%20Angeles" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a>
+                </details>
+              </div>
+            </li>
+            <li>
+              <p class="event-date"><span class="timeline-year">2025</span><time datetime="2025-11-22">November 22</time></p>
+              <div><h3>International Rescue Committee Los Angeles Community Health Fair</h3>
+                <p class="event-location">625 N Maryland Ave, Glendale, California</p>
+                <details class="event-map"><summary>View location on map</summary>
+                  <iframe title="Map: International Rescue Committee Los Angeles Community Health Fair" src="https://maps.google.com/maps?q=625%20N%20Maryland%20Ave%2C%20Glendale%2C%20CA%2091206&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                  <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=625%20N%20Maryland%20Ave%2C%20Glendale%2C%20CA%2091206" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a>
+                </details>
+              </div>
+            </li>
+          </ol>
         </div>
       </section>
 
       <section class="section" id="recognition">
         <div class="wrap recognition-grid">
           <div>
-            <p class="eyebrow">Recognition</p>
-            <h2>California State Senate Recognition</h2>
+            <p class="eyebrow">Recognition · Altadena, California</p>
+            <h2>Recognized for community service.</h2>
             <p class="prose">
               Beyond Borders was recognized by the California State Senate for its
               partnership in CHIRLA’s Rising Together Mental Wellness and Health Fair
-              in Altadena, California.
+              in Altadena, California. Student volunteers provided health and
+              wellness resources for immigrant families.
             </p>
             <p class="prose">
-              Presented by State Senator Sasha Renée Pérez, California’s 25th Senate
+              Presented by <a href="https://sd25.senate.ca.gov/" target="_blank" rel="noopener noreferrer">State Senator Sasha Renée Pérez</a>, California’s 25th Senate
               District, on May 16, 2026.
             </p>
           </div>
           <figure class="recognition-photo">
-            <a href="assets/senate-recognition.jpg">
+            <a href="assets/senate-recognition.jpg" data-lightbox data-caption="California State Senate Certificate of Recognition · May 16, 2026" aria-label="Enlarge the State Senate certificate">
               <img
                 src="assets/senate-recognition.jpg"
                 alt="California State Senate Certificate of Recognition awarded to Beyond Borders, May 16, 2026."
@@ -156,6 +241,7 @@
                 height="1024"
               />
             </a>
+            <figcaption class="certificate-caption">Select to enlarge</figcaption>
           </figure>
         </div>
       </section>
@@ -166,22 +252,30 @@
             <p class="eyebrow">Our Network</p>
             <h2>A shared mission. Local leadership.</h2>
             <p class="prose">
-              Beyond Borders chapters build programs around the needs of their
-              communities while advancing a common national mission.
+              Our chapters at UCLA, USC, and Cal State Fullerton translate a
+              shared commitment to refugee health into locally led initiatives.
+              Each chapter connects student leadership with community priorities
+              through service, advocacy, and research.
             </p>
           </header>
 
-          <figure class="chapter-photo">
+          <figure class="chapter-photo" hidden>
             <img
-              src="assets/chapter.jpg"
+              src="assets/altadena-community-clean-ground.jpg"
               alt="Beyond Borders students and partners gathered outdoors after a community event."
               width="1003"
               height="569"
             />
           </figure>
 
+          <div class="chapter-explorer">
+            <div class="map-heading"><h3>Find your campus.</h3><p>Select a campus to explore its chapter.</p></div>
+            <div id="chapter-map" aria-label="Map of Beyond Borders university chapters"><p class="map-fallback">Explore our Southern California chapters using the campus buttons below.</p></div>
+            <div class="campus-selectors" aria-label="Select a campus"><button type="button" data-campus="ucla" aria-pressed="false">UCLA</button><button type="button" data-campus="usc" aria-pressed="false">USC</button><button type="button" data-campus="csuf" aria-pressed="false">Cal State Fullerton</button></div>
+            <p class="map-status" role="status" aria-live="polite">Campus locations shown for reference.</p>
+          </div>
           <div class="tab-list" role="tablist" aria-label="Chapters" data-level="org">
-            <button type="button" role="tab" id="tab-national" aria-controls="panel-national" aria-selected="true" data-entity="national">National Board</button>
+            <button type="button" role="tab" id="tab-national" aria-controls="panel-national" aria-selected="true" data-entity="national">Founding Team</button>
             <button type="button" role="tab" id="tab-university" aria-controls="panel-university" aria-selected="false" tabindex="-1" data-entity="university">University Chapters</button>
             <button type="button" role="tab" id="tab-hs" aria-controls="panel-hs" aria-selected="false" tabindex="-1" data-entity="hs">High School Chapters</button>
           </div>
@@ -293,7 +387,7 @@
 
           <div class="entity-panel" role="tabpanel" id="panel-university" aria-labelledby="tab-university" hidden>
             <div class="campus-block" style="margin-bottom: 0.8cm">
-              <h3 class="campus-heading">UCLA</h3>
+              <h3 class="campus-heading" id="campus-ucla" tabindex="-1">UCLA</h3><p class="chapter-location">Los Angeles, California</p><a class="text-link chapter-join" href="#inquiry" data-interest="Join a chapter" data-chapter="UCLA">Get involved with UCLA <span aria-hidden="true">↗</span></a>
               <p class="ig">
                 <a href="https://www.instagram.com/beyondbordersucla/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @beyondbordersucla">
                   <svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
@@ -323,7 +417,7 @@
             </div>
 
             <div class="campus-block campus-block-usc" style="margin-bottom: 0.8cm">
-              <h3 class="campus-heading">USC</h3>
+              <h3 class="campus-heading" id="campus-usc" tabindex="-1">USC</h3><p class="chapter-location">Los Angeles, California</p><a class="text-link chapter-join" href="#inquiry" data-interest="Join a chapter" data-chapter="USC">Get involved with USC <span aria-hidden="true">↗</span></a>
               <p class="ig">
                 <a href="https://www.instagram.com/beyondbordersusc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @beyondbordersusc">
                   <svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
@@ -353,7 +447,18 @@
             </div>
 
             <div class="campus-block campus-block-usc">
-              <h3 class="campus-heading">CSUF</h3>
+              <h3 class="campus-heading" id="campus-csuf" tabindex="-1">CSUF</h3><p class="chapter-location">Fullerton, California</p><a class="text-link chapter-join" href="#inquiry" data-interest="Join a chapter" data-chapter="CSUF">Get involved with CSUF <span aria-hidden="true">↗</span></a>
+              <p class="ig">
+                <a href="https://www.instagram.com/beyondborderscsuf/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @beyondborderscsuf">
+                  <svg class="ig-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98C23.99 15.67 24 15.26 24 12s-.01-3.67-.07-4.95C23.73 2.7 21.3.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"
+                    />
+                  </svg>
+                  @beyondborderscsuf
+                </a>
+              </p>
               <ul class="board-grid">
                 <li>
                   <p class="board-office">President</p>
@@ -364,85 +469,83 @@
           </div>
 
           <div class="entity-panel" role="tabpanel" id="panel-hs" aria-labelledby="tab-hs" hidden>
+            <div class="high-school-intro"><h3>Cultivating the next generation of community leaders.</h3><p>Bring refugee health education and community service to your school. Our high school chapter pathway invites students to lead educational outreach and organize service initiatives shaped by community needs.</p><a class="btn btn-ghost" href="#inquiry" data-interest="Start a chapter" data-chapter="High School Chapter">Ask about a high school chapter</a></div>
           </div>
         </div>
       </section>
 
+<section class="section journal-feature" aria-labelledby="journal-feature-title"><div class="wrap journal-feature-grid"><div><p class="eyebrow">Common Ground · A publication by Beyond Borders</p><h2 id="journal-feature-title">Evidence worth examining.</h2><p>Critical perspectives on the research shaping refugee health.</p><a class="text-link" href="journal.html">Explore Common Ground ↗</a></div><a class="journal-feature-story" href="journal-digital-access.html"><span class="eyebrow">Research commentary · 2026</span><h3>When digital access becomes a barrier to care</h3><p>A closer reading of a recent evidence review, and a research agenda for more accessible services.</p><span class="journal-byline">Sasha Gladkikh <span aria-hidden="true">↗</span></span></a></div></section>
       <section class="section involved" id="involved">
         <div class="wrap">
           <header class="section-head">
             <p class="eyebrow">Get Involved</p>
-            <h2>Choose how you want to contribute.</h2>
+            <h2>Help advance the next chapter of refugee health.</h2>
           </header>
           <ul class="paths">
             <li>
               <h3>Join</h3>
-              <p>Serve with an existing chapter through programs, advocacy, research, or leadership.</p>
+              <p>Contribute your time and skills through community service, advocacy, research, and chapter leadership.</p>
+            <a class="text-link" href="#inquiry" data-interest="Join a chapter">Find your chapter <span aria-hidden="true">↗</span></a>
             </li>
             <li>
               <h3>Start</h3>
-              <p>Launch a Beyond Borders chapter in your school or community.</p>
+              <p>Establish a Beyond Borders chapter and build a team committed to advancing refugee health in your community.</p>
+            <a class="text-link" href="#inquiry" data-interest="Start a chapter">Start a conversation <span aria-hidden="true">↗</span></a>
             </li>
             <li>
               <h3>Partner</h3>
-              <p>Work with us on programs, outreach, research, or resource delivery.</p>
+              <p>Bring your organization’s expertise to community health fairs, educational outreach, research, and resource distribution.</p>
+            <a class="text-link" href="#inquiry" data-interest="Partner with Beyond Borders">Explore a partnership <span aria-hidden="true">↗</span></a>
             </li>
             <li>
-              <h3>Donate</h3>
-              <p>Support refugee health programs, essential resources, and chapter growth.</p>
+              <h3 id="giving">Give</h3>
+              <p>Support the essential supplies, community programs, and chapter operations that make our work possible.</p>
+            <a class="text-link" href="#inquiry" data-interest="Donate">Contact us about giving <span aria-hidden="true">↗</span></a>
             </li>
           </ul>
-          <form class="contact-form" name="interest" method="post" action="https://formsubmit.co/beyondbordersucla@gmail.com">
-            <input type="hidden" name="_subject" value="New inquiry from beyondborders.charity" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_next" value="https://beyondborders.charity/thank-you.html" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" />
-            <label>
-              Name
-              <input type="text" name="Name" autocomplete="name" required />
-            </label>
-            <label>
-              Email
-              <input type="email" name="Email" autocomplete="email" required />
-            </label>
-            <label>
-              Area of interest
-              <select name="Area of interest" required>
-                <option value="" disabled selected>Select one</option>
-                <option value="Join a chapter">Join a chapter</option>
-                <option value="Start a chapter">Start a chapter</option>
-                <option value="Partner with Beyond Borders">Partner with Beyond Borders</option>
-                <option value="Donate">Donate</option>
-                <option value="Other">Other</option>
-              </select>
-            </label>
-            <label>
-              Chapter affiliation
-              <select name="Chapter affiliation">
-                <option value="" disabled selected>Select one</option>
-                <option value="National">National</option>
-                <option value="UCLA">UCLA</option>
-                <option value="USC">USC</option>
-                <option value="CSUF">CSUF</option>
-                <option value="High School Chapter">High School Chapter</option>
-                <option value="Not currently affiliated with a chapter">Not currently affiliated with a chapter</option>
-                <option value="Other">Other</option>
-              </select>
-            </label>
-            <label class="span-2">
-              School or organization, if not listed
-              <input type="text" name="School or organization" autocomplete="organization" />
-            </label>
-            <label class="span-2">
-              Message
-              <textarea name="Message" rows="4" required></textarea>
-            </label>
-            <div class="span-2">
-              <button class="btn" type="submit">Send inquiry</button>
-              <p class="form-note" role="status" hidden></p>
+          <div class="inquiry-layout" id="inquiry">
+            <div class="inquiry-heading">
+              <p class="eyebrow">Start a conversation</p>
+              <h3>Your next step.<br />Our shared mission.</h3>
+              <p>Bring your time, ideas, or expertise to advancing refugee health. Tell us how you would like to contribute.</p>
+              <div class="inquiry-contact"><span>Prefer email?</span><a href="mailto:beyondbordersucla@gmail.com">beyondbordersucla@gmail.com</a></div>
             </div>
-          </form>
+            <form class="contact-form" name="interest" method="post" action="https://formsubmit.co/beyondbordersucla@gmail.com" aria-labelledby="form-title">
+              <div class="span-2 form-intro"><h4 id="form-title">Let’s connect.</h4><p>Fields marked * are required.</p></div>
+              <input type="hidden" name="_subject" value="New inquiry from beyondborders.charity" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value="https://beyondborders.charity/thank-you.html" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="text" name="_honey" aria-label="Leave this field empty" class="honey" tabindex="-1" autocomplete="off" />
+              <label>Full name *<input type="text" name="Name" autocomplete="name" required maxlength="150" /></label>
+              <label>Email address *<input type="email" name="Email" autocomplete="email" required maxlength="254" /></label>
+              <label class="span-2">How would you like to get involved? *
+                <select name="Area of interest" required aria-describedby="interest-hint">
+                  <option value="" disabled selected>Choose your path</option>
+                  <option value="Join a chapter">Volunteer or join a chapter</option>
+                  <option value="Start a chapter">Start a chapter</option>
+                  <option value="Partner with Beyond Borders">Explore a partnership</option>
+                  <option value="Donate">Discuss a donation or sponsorship</option>
+                  <option value="Other">Something else</option>
+                </select>
+                <span class="field-hint" id="interest-hint">Select the option that best matches your interest.</span>
+              </label>
+              <label class="span-2" id="chapter-field"><span class="field-label">Chapter of interest <span class="optional">(optional)</span></span>
+                <select name="Chapter affiliation">
+                  <option value="">Select a chapter, or leave blank</option>
+                  <option value="National">National organization</option>
+                  <option value="UCLA">University of California, Los Angeles</option>
+                  <option value="USC">University of Southern California</option>
+                  <option value="CSUF">California State University, Fullerton</option>
+                  <option value="High School Chapter">High school chapter</option>
+                  <option value="Other">Other / not sure yet</option>
+                </select>
+              </label>
+              <label class="span-2"><span class="field-label"><span id="organization-label">School or organization</span> <span class="optional">(optional)</span></span><input type="text" name="School or organization" autocomplete="organization" maxlength="200" /></label>
+              <label class="span-2"><span class="field-label"><span id="message-label">What would you like us to know?</span> *</span><textarea name="Message" rows="4" required maxlength="5000" placeholder="Tell us a little about yourself and how you would like to get involved."></textarea></label>
+              <div class="span-2 form-submit"><p class="form-context">Our team will respond using the email address you provide. Please leave out sensitive personal or financial information.</p><button class="btn" type="submit">Send message <span aria-hidden="true">↗</span></button><p class="form-note" role="status" aria-live="polite" hidden></p></div>
+            </form>
+          </div>
         </div>
       </section>
     </main>
@@ -466,6 +569,17 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <dialog class="image-viewer" aria-labelledby="viewer-caption"><button type="button" class="viewer-close" aria-label="Close image viewer">Close ×</button><figure><img class="viewer-image" alt="" /><figcaption id="viewer-caption"></figcaption></figure><section class="event-collage" hidden aria-labelledby="collage-title"><header><p class="eyebrow">FIELD NOTES / ALTADENA</p><h2 id="collage-title">Care brings us together.</h2><p class="event-journal-date">May 16, 2026 · Community Health Fair</p></header><div class="event-photo-grid">
+<figure class="photo-community"><img src="assets/altadena-community-clean-ground.jpg" alt="Beyond Borders student volunteers, physicians, and community partners gathered at the health fair."/><figcaption>Beyond Borders student volunteers, physicians, and community partners</figcaption></figure>
+<figure class="photo-screening-team"><img src="assets/altadena-screening-team-framed.jpg" alt="Volunteers at a table offering blood pressure and blood glucose screenings."/><figcaption>Blood pressure and glucose screening</figcaption></figure>
+<figure><img src="assets/altadena-resources-focus.jpg" alt="Two volunteers behind the This Way to Health Insurance banner."/><figcaption>Health insurance enrollment support</figcaption></figure>
+<figure class="supplies-story"><img src="assets/altadena-supplies-finished.jpg" alt="Rows of Beyond Borders hygiene kits on a table."/><figcaption>Health and hygiene kits</figcaption></figure>
+<figure class="photo-tacos"><img src="assets/altadena-tacos.jpg" alt="Tacos being prepared and served at the health fair."/><figcaption>Freshly prepared tacos</figcaption></figure>
+</div></section><div class="gallery-controls" hidden><button type="button" class="gallery-prev" aria-label="Previous photo">← Previous</button><span class="gallery-count" role="status" aria-live="polite"></span><button type="button" class="gallery-next" aria-label="Next photo">Next →</button></div></dialog>
+    <dialog class="kit-viewer" aria-labelledby="kit-title"><button type="button" class="viewer-close kit-close" aria-label="Close kit explorer">Close ×</button>
+      <div class="kit-explorer-grid"><div class="kit-visual"><img src="assets/kit-current-logo-retouched.png" alt="An example hygiene kit with toothbrush, comb, razor, bandages, and toiletries." width="1254" height="1254" />
+<button type="button" class="kit-hotspot" data-kit-item="0" style="left:44%;top:17%" aria-label="Explore toothbrush" aria-pressed="true">1</button><button type="button" class="kit-hotspot" data-kit-item="1" style="left:10%;top:42%" aria-label="Explore comb" aria-pressed="false">2</button><button type="button" class="kit-hotspot" data-kit-item="2" style="left:69%;top:27%" aria-label="Explore razor" aria-pressed="false">3</button><button type="button" class="kit-hotspot" data-kit-item="3" style="left:43%;top:39%" aria-label="Explore bandages" aria-pressed="false">4</button><button type="button" class="kit-hotspot" data-kit-item="4" style="left:82%;top:52%" aria-label="Explore personal care" aria-pressed="false">5</button></div><div class="kit-copy"><p class="eyebrow">Everyday essentials</p><h2 id="kit-title">Inside a hygiene kit.</h2><p>Select an item to take a closer look.</p><div class="kit-item-list" aria-label="Kit contents"><button type="button" data-kit-item="0" aria-pressed="true"><span>01</span> Toothbrush</button><button type="button" data-kit-item="1" aria-pressed="false"><span>02</span> Comb</button><button type="button" data-kit-item="2" aria-pressed="false"><span>03</span> Razor</button><button type="button" data-kit-item="3" aria-pressed="false"><span>04</span> Bandages</button><button type="button" data-kit-item="4" aria-pressed="false"><span>05</span> Personal care</button></div><div class="kit-detail" role="status" aria-live="polite"><h3>Toothbrush</h3><p>Individually wrapped oral-care supplies for an everyday routine.</p></div><p class="kit-disclaimer">An example kit with updated branding. Contents vary with community needs and available supplies.</p></div></div></dialog>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js?v=39"></script>
   </body>
 </html>
