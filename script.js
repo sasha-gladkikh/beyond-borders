@@ -150,7 +150,7 @@ function selectCampus(id) {
     marker.getElement()?.classList.toggle('is-active', key === id);
     marker.getElement()?.setAttribute('aria-pressed', String(key === id));
   });
-  campusMarkers[id]?.openPopup();
+  document.dispatchEvent(new CustomEvent('chapter-selected', {detail:{id}}));
   const campus = campuses.find(item => item.id === id);
   document.querySelector('.map-status').textContent = `${campus.label} selected. Explore chapter leadership and ways to get involved.`;
 }
@@ -159,39 +159,20 @@ const mapElement = document.getElementById('chapter-map');
 if (mapElement && window.L) {
   const map = L.map(mapElement, {scrollWheelZoom:false, zoomControl:false}).fitBounds(campuses.map(c => c.coords), {padding:[75,85], maxZoom:10});
   L.control.zoom({position:'bottomright'}).addTo(map);
-  const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom:19, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+  const mapKey = window.BEYOND_BORDERS_MAPS?.maptilerKey;
+  const tileUrl = mapKey ? `https://api.maptiler.com/maps/dataviz-v4-light/256/{z}/{x}/{y}@2x.png?key=${encodeURIComponent(mapKey)}` : 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+  const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' + (mapKey ? ' &copy; <a href="https://www.maptiler.com/copyright/">MapTiler</a>' : '');
+  const tiles = L.tileLayer(tileUrl, {maxZoom:19, attribution}).addTo(map);
+  mapElement.classList.toggle('uses-maptiler', Boolean(mapKey));
+  document.addEventListener('chapter-selected', event => {
+    const campus = campuses.find(item => item.id === event.detail.id);
+    if (campus) map.flyTo(campus.coords, 11, {animate:!window.matchMedia('(prefers-reduced-motion: reduce)').matches, duration:.8});
+  });
   mapElement.querySelector('.map-fallback')?.remove();
   tiles.on('tileerror', () => { document.querySelector('.map-status').textContent = 'Map imagery is unavailable. Use the campus buttons to explore chapter details.'; });
   campuses.forEach(campus => {
-    const card = document.getElementById(`campus-${campus.id}`).closest('.campus-block');
-    const popup = document.createElement('section');
-    popup.className = 'chapter-map-card';
-    const title = document.createElement('h3');
-    title.textContent = `Beyond Borders at ${campus.label}`;
-    const place = document.createElement('p');
-    place.className = 'map-card-location';
-    place.textContent = card.querySelector('.chapter-location').textContent;
-    const leader = document.createElement('p');
-    leader.className = 'map-card-leader';
-    leader.textContent = `President · ${card.querySelector('.board-name').textContent.trim()}`;
-    const join = document.createElement('a');
-    join.className = 'map-card-join';
-    join.href = '#inquiry';
-    join.innerHTML = 'Get involved <svg class="link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg>';
-    join.addEventListener('click', () => {
-      form.querySelector('[name="Area of interest"]').value = 'Join a chapter';
-      form.querySelector('[name="Chapter affiliation"]').value = card.querySelector('.chapter-join').dataset.chapter;
-      updateInquiry();
-      map.closePopup();
-    });
-    const social = card.querySelector('.ig a').cloneNode(true);
-    social.className = 'map-card-social';
-    const eyebrow = document.createElement('span');
-    eyebrow.className = 'map-card-eyebrow';
-    eyebrow.textContent = 'UNIVERSITY CHAPTER';
-    popup.append(eyebrow, title, place, leader, join, social);
     const label = campus.id === 'csuf' ? 'CSUF' : campus.label;
-    campusMarkers[campus.id] = L.marker(campus.coords, {title:`Explore ${campus.label}`,alt:`Explore ${campus.label}`,icon:L.divIcon({className:'campus-pin',html:`<span>${label}</span>`,iconSize:[70,34],iconAnchor:[35,17]})}).addTo(map).bindPopup(popup, {className:'chapter-popup', maxWidth:285, minWidth:235, offset:[0,-12], autoPanPadding:[24,24]}).on('click', () => selectCampus(campus.id));
+    campusMarkers[campus.id] = L.marker(campus.coords, {title:`Explore ${campus.label}`,alt:`Explore ${campus.label}`,icon:L.divIcon({className:'campus-pin',html:`<span>${label}</span>`,iconSize:[70,34],iconAnchor:[35,17]})}).addTo(map).on('click', () => selectCampus(campus.id));
   });
 }
 

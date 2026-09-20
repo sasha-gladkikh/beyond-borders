@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <link rel="stylesheet" href="styles.css?v=43" />
+    <link rel="stylesheet" href="styles.css?v=44" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -270,7 +270,8 @@
 
           <div class="chapter-explorer">
             <div class="map-heading"><h3>Find your campus.</h3><p>Select a campus to explore its chapter.</p></div>
-            <div id="chapter-map" aria-label="Map of Beyond Borders university chapters"><p class="map-fallback">Explore our Southern California chapters using the campus buttons below.</p></div>
+            <div class="chapter-map-layout"><div id="chapter-map" aria-label="Map of Beyond Borders university chapters"><p class="map-fallback">Explore our Southern California chapters using the campus buttons below.</p></div>
+            <aside id="chapter-map-detail" class="chapter-map-detail" aria-label="Selected chapter"></aside></div>
             <div class="campus-selectors" aria-label="Select a campus"><button type="button" data-campus="ucla" aria-pressed="false">UCLA</button><button type="button" data-campus="usc" aria-pressed="false">USC</button><button type="button" data-campus="csuf" aria-pressed="false">Cal State Fullerton</button></div>
             <p class="map-status" role="status" aria-live="polite">Campus locations shown for reference.</p>
           </div>
@@ -585,6 +586,8 @@
       <div class="kit-explorer-grid"><div class="kit-visual"><img src="assets/kit-current-logo-retouched.png" alt="An example hygiene kit with toothbrush, comb, razor, bandages, and toiletries." width="1254" height="1254" />
 <button type="button" class="kit-hotspot" data-kit-item="0" style="left:44%;top:17%" aria-label="Explore toothbrush" aria-pressed="true">1</button><button type="button" class="kit-hotspot" data-kit-item="1" style="left:10%;top:42%" aria-label="Explore comb" aria-pressed="false">2</button><button type="button" class="kit-hotspot" data-kit-item="2" style="left:69%;top:27%" aria-label="Explore razor" aria-pressed="false">3</button><button type="button" class="kit-hotspot" data-kit-item="3" style="left:43%;top:39%" aria-label="Explore bandages" aria-pressed="false">4</button><button type="button" class="kit-hotspot" data-kit-item="4" style="left:82%;top:52%" aria-label="Explore personal care" aria-pressed="false">5</button></div><div class="kit-copy"><p class="eyebrow">Everyday essentials</p><h2 id="kit-title">Inside a hygiene kit.</h2><p>Select an item to take a closer look.</p><div class="kit-item-list" aria-label="Kit contents"><button type="button" data-kit-item="0" aria-pressed="true"><span>01</span> Toothbrush</button><button type="button" data-kit-item="1" aria-pressed="false"><span>02</span> Comb</button><button type="button" data-kit-item="2" aria-pressed="false"><span>03</span> Razor</button><button type="button" data-kit-item="3" aria-pressed="false"><span>04</span> Bandages</button><button type="button" data-kit-item="4" aria-pressed="false"><span>05</span> Personal care</button></div><div class="kit-detail" role="status" aria-live="polite"><h3>Toothbrush</h3><p>Individually wrapped oral-care supplies for an everyday routine.</p></div><p class="kit-disclaimer">An example kit with updated branding. Contents vary with community needs and available supplies.</p></div></div></dialog>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script src="script.js?v=43"></script>
+    <script src="map-config.js"></script>
+    <script src="script.js?v=44"></script>
+    <script src="chapter-map-details.js?v=1"></script>
   </body>
 </html>
