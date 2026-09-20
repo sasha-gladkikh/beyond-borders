@@ -1046,3 +1046,30 @@ body.viewer-open { overflow:hidden; }
 
 /* Vector arrows render consistently without emoji substitution on iOS. */
 .link-arrow { display:inline-block; width:1em; height:1em; vertical-align:-.12em; flex-shrink:0; }
+
+/* A connected, photo-free route through the fair. */
+.fair-stations {position:relative;gap:0;margin:2.5rem 0 2rem;}
+.fair-stations::before {content:"";position:absolute;top:24px;left:10%;right:10%;height:2px;background:#cbd5ed;}
+.fair-stations button {position:relative;z-index:1;text-align:center;border:0;background:transparent;padding:0 6px;color:#526176;box-shadow:none!important;}
+.fair-stations button span {display:grid;place-items:center;width:50px;height:50px;margin:0 auto 12px;border:2px solid #cbd5ed;border-radius:50%;background:#f5f7fb;font-size:16px;color:#697c9e;transition:background .15s;}
+.fair-stations button[aria-selected=true] {background:transparent;color:#263fa8;}
+.fair-stations button[aria-selected=true] span {background:#334dc0;border-color:#334dc0;box-shadow:0 0 0 6px #e5eaff;}
+.fair-panel {grid-template-columns:250px 1fr;max-width:950px;margin:auto;}
+.fair-waypoint {background:#eaf0ff;padding:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#334dc0;text-align:center;}
+#fair-stage {font-size:12px;letter-spacing:.16em;font-weight:700;}
+#fair-icon {width:90px;height:90px;border-radius:25px;background:#fff;display:grid;place-items:center;margin:25px 0 18px;}
+#fair-icon svg {width:48px;height:48px;}
+#fair-stop-name {font-size:24px;font-weight:700;margin:0 0 8px;}
+.fair-waypoint-caption {font-size:13px;color:#596e9c;}
+.fair-copy {padding:2rem 2.5rem;}
+.fair-copy h3 {font-size:1.9rem;}
+.fair-stations button:focus-visible {outline:2px solid #334dc0;outline-offset:7px;border-radius:8px;}
+@media(max-width:650px){.fair-panel{grid-template-columns:1fr}.fair-waypoint{padding:20px;display:grid;grid-template-columns:58px 1fr;column-gap:16px;text-align:left;justify-items:start}.fair-waypoint #fair-icon{grid-column:1;grid-row:1/4;width:58px;height:58px;margin:0;border-radius:16px}.fair-waypoint #fair-icon svg{width:32px;height:32px}.fair-waypoint #fair-stage{grid-column:2;font-size:10px}.fair-waypoint #fair-stop-name{grid-column:2;font-size:19px;margin:3px 0}.fair-waypoint-caption{grid-column:2;font-size:12px}.fair-copy{padding:24px}.fair-copy h3{font-size:1.65rem}.fair-stations button{font-size:11px;padding:0 2px}.fair-stations button span{width:40px;height:40px;font-size:13px}.fair-stations::before{top:19px}}
+
+/* Keep each roadmap stop focused on its headline and explanation. */
+.fair-panel {grid-template-columns:1fr;max-width:800px;}
+.fair-copy {padding:2rem 2.5rem;}
+.fair-copy h3 {margin:0 0 .7rem;}
+.fair-copy #fair-description {margin:0;max-width:65ch;}
+.fair-controls {border-top:1px solid #edf0f6;padding-top:1rem;margin-top:1.3rem;}
+@media(max-width:650px){.fair-copy{padding:24px;}}
