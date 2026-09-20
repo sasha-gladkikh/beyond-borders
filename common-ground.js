@@ -12,3 +12,11 @@ function filterStories(){
 }
 search.addEventListener('input',filterStories);format.addEventListener('change',filterStories);
 document.querySelector('.cg-library-tools').addEventListener('submit',event=>{event.preventDefault();filterStories();});
+
+// Play each visual preview once on arrival; keep every detail visible without JS.
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+ const previewObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('cg-preview-running');previewObserver.unobserve(entry.target);}});
+ },{threshold:0.35});
+ document.querySelectorAll('.cg-story-image').forEach(preview=>previewObserver.observe(preview));
+}
