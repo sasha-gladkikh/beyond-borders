@@ -3,7 +3,7 @@
     {
       "id": "digital-access",
       "title": "When digital access becomes a barrier to care",
-      "summary": "An appointment exists online. Can everyone reach it? Examining the distance between offering healthcare and making it accessible.",
+      "summary": "Booking care online can make life easier. It can also create another barrier. A review of nine systematic reviews examines what helps people access care and what gets in the way.",
       "author": "Sasha Gladkikh",
       "date": "2026-09-19",
       "format": "Research commentary",
@@ -21,7 +21,7 @@
     {
       "id": "resettlement",
       "title": "An appointment is only the beginning",
-      "summary": "One appointment. Everything it can take to get there. An animated journey through the practical steps between a referral and access to care.",
+      "summary": "A referral gives someone an appointment. What helps them get there? Follow the roles of language, transportation, work, and caregiving.",
       "author": "Rashad Charif",
       "date": "2026-09-20",
       "format": "Visual essay",
@@ -36,5 +36,11 @@
       "featured": true,
       "status": "published"
     }
-  ]
+  ],
+  "newsletter": {
+    "signupUrl": null,
+    "heading": "Get new Common Ground stories by email.",
+    "description": "Research, perspectives, and visual stories on displacement and health.",
+    "note": "Connect a hosted signup page before displaying this section. Do not promise a publication schedule until confirmed."
+  }
 }
