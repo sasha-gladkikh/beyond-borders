@@ -1,0 +1,36 @@
+/* Refine the restored editorial style without replacing its typefaces. */
+.cg-news-header nav a {font-family:Manrope,Arial,sans-serif;font-size:13px;font-weight:500;line-height:1.5;letter-spacing:0}
+.cg-news-header nav {gap:26px}
+.cg-story-grid>.cg-story:not(.is-lead) {grid-column:span 2;max-width:760px}
+.cg-story:not(.is-lead) .cg-story-image {max-width:440px}
+.cg-story h2 {line-height:1.16;letter-spacing:-.025em;text-wrap:pretty}
+.cg-story:not(.is-lead) h2 {max-width:28ch;font-size:clamp(28px,3vw,36px)}
+.cg-story-summary {max-width:56ch}
+.cg-contribute h2,.cg-news-about h2,.cg-resource h2,.cg-resource h3,.article-body h2,.ap-chapter h2,.ap-conclusion h2,.ap-share-copy h2 {font-weight:400}
+.cg-story-meta {font-size:13px;line-height:1.6;margin:20px 0 12px}
+.cg-author-name {display:block;font-size:15px;font-weight:600;color:#2e3e50;margin-bottom:5px}
+.cg-publish-details {display:block;color:#627083;font-size:12px}
+.cg-story-category {font-size:11px;line-height:1.6;letter-spacing:.045em;font-weight:600;margin-bottom:12px}
+.cg-story-category span {font-weight:400;letter-spacing:.025em;color:#627083}
+.article-byline {font-size:14px;line-height:1.75;flex-wrap:wrap}
+.article-byline strong,.ap-byline strong {font-size:15px;font-weight:600;color:#2e3e50}
+.article-byline>span:last-child {font-size:12px;color:#627083}
+.ap-byline {font-size:14px;line-height:1.75;align-items:baseline}
+.ap-byline>span {font-size:12px}
+.article-body>p,.article-body>ul,.article-body>ol {max-width:66ch}
+.article-page .article-body {line-height:1.78}
+.article-body>p {margin-bottom:1.4em}
+.article-body>h2 {max-width:32ch;margin-top:1.65em;margin-bottom:.65em}
+.ap-chapter>p:not(.ap-eyebrow) {max-width:62ch;line-height:1.8;margin-top:0;margin-bottom:1.35em}
+.ap-conclusion>p {max-width:65ch;line-height:1.75;margin-bottom:1.4em}
+.cg-resource>p:not(.eyebrow) {max-width:66ch;line-height:1.75}
+@media(max-width:750px){
+ .cg-news-header nav {gap:10px 16px}
+ .cg-news-header nav a {font-size:12px}
+ .cg-story-grid>.cg-story:not(.is-lead) {grid-column:1/-1}
+ .cg-story-category span {display:inline;margin-top:0}
+ .cg-story:not(.is-lead) h2 {max-width:28ch}
+ .article-page .article-layout {grid-template-columns:minmax(0,1fr)}
+ .article-byline {gap:14px 28px}
+}
+@media(max-width:420px){.cg-news-header nav a{font-size:11px}.cg-news-header nav{gap:8px 12px}}
