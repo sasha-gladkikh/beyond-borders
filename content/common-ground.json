@@ -15,6 +15,24 @@
       "url": "journal-digital-access.html",
       "image": "assets/common-ground-digital-access.svg",
       "imageAlt": "Editorial illustration of an online appointment window and an interrupted route to care.",
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "id": "resettlement",
+      "title": "Arrival is only the beginning",
+      "summary": "An interactive map of the strengths people bring, the conditions they encounter, and the connections that can support health.",
+      "author": "Rashad Charif",
+      "date": "2026-09-20",
+      "format": "Visual essay",
+      "topics": [
+        "Displacement",
+        "Health systems"
+      ],
+      "readingMinutes": 4,
+      "url": "journal-resettlement.html",
+      "image": "assets/common-ground-resettlement.svg",
+      "imageAlt": "A network connecting skills, identity, housing, language access, care and community support.",
       "featured": true,
       "status": "published"
     }
