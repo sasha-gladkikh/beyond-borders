@@ -1,0 +1,37 @@
+/* Alternating editorial rows retain the original cover typography. */
+.gazette-home:not(.cg-topics-page) .cg-story-grid {display:block}
+.gazette-home:not(.cg-topics-page) .cg-story-grid>.cg-story {display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,4vw,60px);max-width:none;margin:0;padding:32px 0 46px;align-items:center}
+.gazette-home:not(.cg-topics-page) .cg-story-grid>.cg-story+ .cg-story {border-top:1px solid #d6dadc;padding-top:46px}
+.gazette-home:not(.cg-topics-page) .cg-story-grid>.cg-story:nth-child(even) .cg-story-image {grid-column:2;grid-row:1}
+.gazette-home:not(.cg-topics-page) .cg-story-grid>.cg-story:nth-child(even) .cg-story-copy {grid-column:1;grid-row:1}
+.gazette-home:not(.cg-topics-page) .cg-story-image {width:100%;max-width:none}
+.gazette-home:not(.cg-topics-page) .cg-story-category {margin-top:0}
+.gazette-home:not(.cg-topics-page) .cg-story:not(.is-lead) h2 {font-size:clamp(30px,3.4vw,44px);max-width:25ch}
+.gazette-home .cg-story[hidden] {display:none!important}
+.cg-topics-main {padding-bottom:32px}
+.cg-topics-main .cg-cover-heading h1 {font-size:clamp(36px,5vw,60px);font-weight:400;letter-spacing:-.035em}
+.cg-topic-filters {display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 14px}
+.cg-topic-filters[hidden] {display:none}
+.cg-topic-filters button {font:600 13px/1.5 Manrope,Arial,sans-serif;color:#33445d;border:1px solid #cbd2dc;border-radius:30px;padding:10px 18px;background:transparent;cursor:pointer}
+.cg-topic-filters button:hover {background:#edf0f6}
+.cg-topic-filters button[aria-pressed=true] {background:#263f70;border-color:#263f70;color:white}
+.cg-topic-count {font-size:13px;color:#627083;margin:14px 0 28px}
+.cg-topics-page .cg-topic-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 36px}
+.cg-topics-page .cg-topic-grid>.cg-story {grid-column:auto;max-width:none}
+.cg-topics-page .cg-story-image {max-width:none}
+.cg-topics-page .cg-story h2 {font-size:clamp(26px,2.8vw,36px);max-width:28ch}
+.cg-shared-footer {display:grid;grid-template-columns:1fr auto;gap:22px 35px;align-items:start}
+.cg-footer-brand {font:22px/1.2 Georgia,serif;text-decoration:none}
+.cg-footer-brand span {display:block;font:11px/1.6 Manrope,Arial,sans-serif;margin-top:7px}
+.cg-shared-footer nav {display:flex;gap:14px 22px;flex-wrap:wrap;justify-content:end}
+.cg-shared-footer nav a {font-size:12px;text-decoration:none}
+.cg-shared-footer a:hover {text-decoration:underline;text-underline-offset:4px}
+.cg-shared-footer p {grid-column:1/-1;font-size:11px;line-height:1.6;max-width:none}
+@media(max-width:750px){
+ .gazette-home:not(.cg-topics-page) .cg-story-grid>.cg-story {grid-template-columns:1fr;gap:24px;padding:18px 0 34px}
+ .gazette-home:not(.cg-topics-page) .cg-story-grid>.cg-story+ .cg-story {padding-top:34px}
+ .gazette-home:not(.cg-topics-page) .cg-story-grid>.cg-story:nth-child(even) .cg-story-image,.gazette-home:not(.cg-topics-page) .cg-story-grid>.cg-story:nth-child(even) .cg-story-copy {grid-column:auto;grid-row:auto}
+ .cg-topics-page .cg-topic-grid {grid-template-columns:1fr;gap:38px}
+ .cg-shared-footer {grid-template-columns:1fr;gap:20px}
+ .cg-shared-footer nav {justify-content:start}
+}
