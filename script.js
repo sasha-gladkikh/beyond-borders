@@ -200,9 +200,9 @@ const viewer = document.querySelector('.image-viewer');
 let viewerTrigger;
 let galleryItems = [], galleryIndex = 0;
 const altadenaGallery = [
- ['assets/altadena-community-clean-ground.jpg','Altadena Community Health Fair · Community and partners'],
+ ['assets/altadena-community-clean-ground.jpg','Coalition for Humane Immigrant Rights (CHIRLA) Community Health Fair · Community and partners'],
  ['assets/altadena-resources-focus.jpg','Health insurance resources · Altadena'],
- ['assets/altadena-supplies-finished.jpg','Health and hygiene kits prepared for distribution · Altadena']
+ ['assets/altadena-supplies-stickers-only.png','Health and hygiene kits prepared for distribution · Altadena']
 ];
 function renderGallery() {
  const [src,caption] = galleryItems[galleryIndex];
