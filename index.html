@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <link rel="stylesheet" href="styles.css?v=45" />
+    <link rel="stylesheet" href="styles.css?v=47" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -276,7 +276,7 @@
             <p class="map-status" role="status" aria-live="polite">Campus locations shown for reference.</p>
           </div>
           <div class="tab-list" role="tablist" aria-label="Chapters" data-level="org">
-            <button type="button" role="tab" id="tab-national" aria-controls="panel-national" aria-selected="true" data-entity="national">Founding Team</button>
+            <button type="button" role="tab" id="tab-national" aria-controls="panel-national" aria-selected="true" data-entity="national">Leadership</button>
             <button type="button" role="tab" id="tab-university" aria-controls="panel-university" aria-selected="false" tabindex="-1" data-entity="university">University Chapters</button>
             <button type="button" role="tab" id="tab-hs" aria-controls="panel-hs" aria-selected="false" tabindex="-1" data-entity="hs">High School Chapters</button>
           </div>
@@ -312,8 +312,19 @@
                   </p>
                 </div>
               </li>
+            </ul>
+            <div class="inaugural-board-group">
+            <header class="inaugural-board-header"><h3 class="inaugural-board-heading" id="inaugural-board-heading">Founding UCLA Chapter Board</h3><p class="board-era">2024–2025</p></header>
+            <ul class="board-grid board-grid-one" aria-labelledby="inaugural-board-heading">
               <li>
-                <p class="board-name">Kasra Eshtehardian</p>
+                <svg class="board-photo" viewBox="0 0 72 72" width="72" height="72" aria-hidden="true" focusable="false">
+                  <rect width="72" height="72" fill="#e8efef"/>
+                  <circle cx="36" cy="27" r="12" fill="#78959a"/>
+                  <path d="M12 72v-9a24 24 0 0 1 48 0v9Z" fill="#78959a"/>
+                </svg>
+                <div>
+                  <p class="board-name">Kasra Eshtehardian</p>
+                </div>
               </li>
               <li>
                 <img
@@ -380,10 +391,11 @@
                   height="720"
                 />
                 <div>
-                  <p class="board-name">Fedal Hanoun</p>
+                <p class="board-name">Fedal Hanoun</p>
                 </div>
               </li>
             </ul>
+            </div>
           </div>
 
           <div class="entity-panel" role="tabpanel" id="panel-university" aria-labelledby="tab-university" hidden>
@@ -462,8 +474,15 @@
               </p>
               <ul class="board-grid">
                 <li>
-                  <p class="board-office">President</p>
-                  <p class="board-name">Rashad Charif</p>
+<svg class="board-photo" viewBox="0 0 72 72" width="72" height="72" aria-hidden="true" focusable="false">
+                  <rect width="72" height="72" fill="#e8efef"/>
+                  <circle cx="36" cy="27" r="12" fill="#78959a"/>
+                  <path d="M12 72v-9a24 24 0 0 1 48 0v9Z" fill="#78959a"/>
+                </svg>
+                  <div>
+                    <p class="board-office">President</p>
+                    <p class="board-name">Rashad Charif</p>
+                  </div>
                 </li>
               </ul>
             </div>
