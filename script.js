@@ -158,6 +158,7 @@ document.querySelectorAll('[data-campus]').forEach(button => button.addEventList
 const mapElement = document.getElementById('chapter-map');
 if (mapElement && window.L) {
   const map = L.map(mapElement, {scrollWheelZoom:false, zoomControl:false}).fitBounds(campuses.map(c => c.coords), {padding:[75,85], maxZoom:10});
+  map.attributionControl.setPrefix(false);
   L.control.zoom({position:'bottomright'}).addTo(map);
   const mapKey = window.BEYOND_BORDERS_MAPS?.maptilerKey;
   const tileUrl = mapKey ? `https://api.maptiler.com/maps/dataviz-v4-light/256/{z}/{x}/{y}@2x.png?key=${encodeURIComponent(mapKey)}` : 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
