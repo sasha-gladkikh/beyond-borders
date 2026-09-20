@@ -23,3 +23,7 @@
 #cg-proposal summary{cursor:pointer;font-weight:600}
 @media(max-width:800px){.cg-contribution{padding:0 22px;margin-top:35px}.cg-contribution-layout{grid-template-columns:1fr;gap:30px}.cg-contribution header{max-width:620px}#cg-proposal{padding:24px}}
 @media(max-width:520px){.cg-field-row{grid-template-columns:1fr;gap:0}#cg-proposal{padding:20px}}
+
+#cg-proposal input[type=file]{font-size:13px;background:#f8f9fc;padding:12px;overflow:hidden}
+#cg-proposal input[type=file]::file-selector-button{border:1px solid #aab8ce;border-radius:5px;padding:8px 12px;margin-right:12px;background:white;color:#263f70;font-weight:600}
+#cg-attachment-hint,#cg-attachment-status{font-size:12px;line-height:1.65;color:#627083;margin:-9px 0 18px}
