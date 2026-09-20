@@ -177,7 +177,7 @@ if (mapElement && window.L) {
     const join = document.createElement('a');
     join.className = 'map-card-join';
     join.href = '#inquiry';
-    join.textContent = 'Get involved ↗';
+    join.innerHTML = 'Get involved <svg class="link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg>';
     join.addEventListener('click', () => {
       form.querySelector('[name="Area of interest"]').value = 'Join a chapter';
       form.querySelector('[name="Chapter affiliation"]').value = card.querySelector('.chapter-join').dataset.chapter;

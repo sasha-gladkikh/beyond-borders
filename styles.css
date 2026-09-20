@@ -1043,3 +1043,6 @@ body.viewer-open { overflow:hidden; }
 @media(max-width:750px) { .fair-panel,.journal-feature-grid { grid-template-columns:1fr; gap:0; } .fair-image { min-height:260px; } .fair-copy { padding:1.5rem; } .fair-stations { gap:5px; } .fair-stations button { padding:.6rem .3rem; text-align:center; font-size:11px; } .fair-stations button span { font-size:20px; } .journal-feature-story { border-left:0; border-top:1px solid #d7d9e2; padding:2rem 0 0; margin-top:2rem; } }
 @media(max-width:520px) { .collage-kit { width:57%; bottom:10%; } }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+
+/* Vector arrows render consistently without emoji substitution on iOS. */
+.link-arrow { display:inline-block; width:1em; height:1em; vertical-align:-.12em; flex-shrink:0; }
