@@ -21,6 +21,8 @@ attachment.addEventListener('change',validateAttachment);
 proposal.addEventListener('submit',async event=>{
  event.preventDefault();validateAttachment();if(!proposal.reportValidity())return;
  const status=document.getElementById('cg-proposal-status');
+ const name=document.getElementById('cg-proposal-name');
+ if(!name.value.trim()){name.focus();status.textContent='Please enter your name.';return;}
  const idea=document.getElementById('cg-proposal-idea');
  if(!idea.value.trim()){idea.focus();status.textContent='Please add a few words about your idea.';return;}
  const button=proposal.querySelector('button[type="submit"]');if(button.disabled)return;
