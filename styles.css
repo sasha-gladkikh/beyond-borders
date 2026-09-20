@@ -1073,3 +1073,10 @@ body.viewer-open { overflow:hidden; }
 .fair-copy #fair-description {margin:0;max-width:65ch;}
 .fair-controls {border-top:1px solid #edf0f6;padding-top:1rem;margin-top:1.3rem;}
 @media(max-width:650px){.fair-copy{padding:24px;}}
+
+/* A concise invitation to the publication. */
+.journal-invitation{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.journal-invitation h2{margin:.5rem 0 1rem}
+.journal-invitation p:last-child{margin-bottom:0;max-width:40rem}
+.journal-invitation>.text-link{flex-shrink:0}
+@media(max-width:750px){.journal-invitation{align-items:flex-start;flex-direction:column;gap:1.5rem}}
