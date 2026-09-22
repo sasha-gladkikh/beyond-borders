@@ -49,7 +49,7 @@ form?.addEventListener("submit", async (event) => {
     window.location.href = "thank-you.html";
   } catch {
     if (note) {
-      note.textContent = "We could not confirm your message was sent. Your answers are still here. Please try again or email contact@beyondborders.charity.";
+      note.textContent = "Unable to send right now. Please try again or email contact@beyondborders.charity.";
     }
   } finally {
     clearTimeout(timeout);

@@ -35,6 +35,6 @@ proposal.addEventListener('submit',async event=>{
   status.textContent='Thank you for sharing your idea. Your message has been sent to the Common Ground editorial team.';
   proposal.reset();attachment.setCustomValidity('');attachmentStatus.textContent='';document.getElementById('cg-format-prompt').textContent='Choose the closest fit. Your idea can evolve.';
  }catch{
-  status.textContent='We could not confirm that your idea was sent. Your answers are still here. Please try again or email contact@beyondborders.charity.';
+  status.textContent='Unable to send right now. Please try again or email contact@beyondborders.charity.';
  }finally{clearTimeout(timeout);button.disabled=false;button.innerHTML=label;proposal.removeAttribute('aria-busy');}
 });

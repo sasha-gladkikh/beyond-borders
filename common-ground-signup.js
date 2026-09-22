@@ -14,6 +14,6 @@ signupForm.addEventListener('submit',async event=>{
   signupStatus.textContent='Thank you. Your request has been sent to our team. Your signup still needs to be processed.';
   signupForm.reset();
  }catch{
-  signupStatus.textContent='We could not confirm that your request was sent. Please try again or use “Write to us” below. Your email is still in the form.';
+  signupStatus.textContent='Unable to send right now. Please try again or select “Write to us” below.';
  }finally{clearTimeout(timeout);button.disabled=false;button.innerHTML=label;signupForm.removeAttribute('aria-busy');}
 });
