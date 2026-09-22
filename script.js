@@ -37,7 +37,7 @@ form?.addEventListener("submit", async (event) => {
     note.textContent = "Sending…";
   }
   try {
-    const response = await fetch("https://formsubmit.co/ajax/beyondbordersucla@gmail.com", {
+    const response = await fetch("https://formsubmit.co/ajax/contact@beyondborders.charity", {
       method: "POST",
       signal: controller.signal,
       body: new FormData(form),
@@ -49,7 +49,7 @@ form?.addEventListener("submit", async (event) => {
     window.location.href = "thank-you.html";
   } catch {
     if (note) {
-      note.textContent = "We could not confirm your message was sent. Your answers are still here. Please try again or email beyondbordersucla@gmail.com.";
+      note.textContent = "We could not confirm your message was sent. Your answers are still here. Please try again or email contact@beyondborders.charity.";
     }
   } finally {
     clearTimeout(timeout);

@@ -8,7 +8,7 @@ signupForm.addEventListener('submit',async event=>{
  signupStatus.textContent='Sending your request…';
  const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),20000);
  try{
-  const response=await fetch('https://formsubmit.co/ajax/beyondbordersucla@gmail.com',{method:'POST',body:new FormData(signupForm),headers:{Accept:'application/json'},signal:controller.signal});
+  const response=await fetch('https://formsubmit.co/ajax/contact@beyondborders.charity',{method:'POST',body:new FormData(signupForm),headers:{Accept:'application/json'},signal:controller.signal});
   if(!response.ok)throw new Error('Request failed');
   const result=await response.json();if(result.success!==true&&result.success!=='true')throw new Error('Unconfirmed');
   signupStatus.textContent='Thank you. Your request has been sent to our team. Your signup still needs to be processed.';

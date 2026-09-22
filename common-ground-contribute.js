@@ -29,12 +29,12 @@ proposal.addEventListener('submit',async event=>{
  const label=button.innerHTML;button.disabled=true;button.textContent='Sending…';proposal.setAttribute('aria-busy','true');status.textContent='Sending your idea…';
  const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),60000);
  try{
-  const response=await fetch('https://formsubmit.co/ajax/beyondbordersucla@gmail.com',{method:'POST',body:new FormData(proposal),headers:{Accept:'application/json'},signal:controller.signal});
+  const response=await fetch('https://formsubmit.co/ajax/contact@beyondborders.charity',{method:'POST',body:new FormData(proposal),headers:{Accept:'application/json'},signal:controller.signal});
   if(!response.ok)throw new Error('Request failed');
   const result=await response.json();if(result.success!==true&&result.success!=='true')throw new Error('Unconfirmed');
   status.textContent='Thank you for sharing your idea. Your message has been sent to the Common Ground editorial team.';
   proposal.reset();attachment.setCustomValidity('');attachmentStatus.textContent='';document.getElementById('cg-format-prompt').textContent='Choose the closest fit. Your idea can evolve.';
  }catch{
-  status.textContent='We could not confirm that your idea was sent. Your answers are still here. Please try again or email beyondbordersucla@gmail.com.';
+  status.textContent='We could not confirm that your idea was sent. Your answers are still here. Please try again or email contact@beyondborders.charity.';
  }finally{clearTimeout(timeout);button.disabled=false;button.innerHTML=label;proposal.removeAttribute('aria-busy');}
 });
