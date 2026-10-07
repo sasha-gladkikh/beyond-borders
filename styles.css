@@ -1097,40 +1097,25 @@ body.viewer-open { overflow:hidden; }
 #chapter-map .leaflet-control-attribution a{color:inherit;text-decoration:none}
 #chapter-map .leaflet-control-attribution a:hover,#chapter-map .leaflet-control-attribution a:focus-visible{text-decoration:underline}
 
-/* Founder and inaugural chapter board. */
-#panel-national:not([hidden]) {
-  display: grid;
-  grid-template-columns: minmax(230px, .8fr) minmax(0, 2fr);
-  gap: clamp(2rem, 5vw, 4.5rem);
-  padding-top: 2.5rem;
-  align-items: start;
+/* Organization-wide leadership. */
+#panel-national:not([hidden]) { padding-top: 2.5rem; }
+#panel-national .leadership-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 3rem;
 }
-#panel-national > .board-grid { display: block; }
-#panel-national > .board-grid > li {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0;
+#panel-national .leadership-grid > li {
+  padding: 1.75rem 0;
   gap: 1.25rem;
   background: transparent;
   border: 0;
-  border-radius: 20px;
+  border-top: 1px solid #dbe2eb;
+  border-radius: 0;
 }
-#panel-national > .board-grid .board-photo { width: 80px; height: 80px; border-radius: 12px; }
+#panel-national .board-photo { width: 80px; height: 80px; border-radius: 12px; }
 #panel-national .board-name { font-size: 1rem; line-height: 1.5; flex-wrap: wrap; }
-#panel-national .board-office { max-width: 15rem; line-height: 1.8; margin-bottom: .65rem; }
-.inaugural-board-header { margin-bottom: 1.7rem; }
-.board-era { color: #526582; font-size: .75rem; letter-spacing: .12em; font-weight: 700; margin: .6rem 0 0; }
-.inaugural-board-heading { margin: 0; font-family: "Manrope", sans-serif; font-size: clamp(1.35rem, 2.2vw, 1.8rem); font-weight: 700; line-height: 1.3; color: var(--navy); scroll-margin-top: 110px; }
-.inaugural-board-group .board-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.5rem; }
-.inaugural-board-group .board-grid li { padding: 1.2rem 0; border: 0; border-top: 1px solid #dbe2eb; border-radius: 0; background: transparent; gap: 1rem; }
-.inaugural-board-group .board-photo { width: 80px; height: 80px; border-radius: 12px; }
+#panel-national .board-office { line-height: 1.7; margin-bottom: .4rem; }
 @media (max-width: 760px) {
-  #panel-national:not([hidden]) { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 1.5rem; }
-  #panel-national > .board-grid > li { flex-direction: row; align-items: center; padding: 0; }
-  #panel-national > .board-grid .board-photo { width: 80px; height: 80px; }
-}
-@media (max-width: 480px) {
-  .inaugural-board-group .board-grid { grid-template-columns: 1fr; gap: 0; }
-  .inaugural-board-heading br { display: none; }
+  #panel-national:not([hidden]) { padding-top: 1.5rem; }
+  #panel-national .leadership-grid { grid-template-columns: 1fr; }
+  #panel-national .leadership-grid > li { padding: 1.25rem 0; gap: 1rem; }
 }
