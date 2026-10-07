@@ -1112,6 +1112,7 @@ body.viewer-open { overflow:hidden; }
   border-radius: 0;
 }
 #panel-national .board-photo { width: 80px; height: 80px; border-radius: 12px; }
+#panel-national .board-photo-elle { object-position: center center; }
 #panel-national .board-name { font-size: 1rem; line-height: 1.5; flex-wrap: wrap; }
 #panel-national .board-office { line-height: 1.7; margin-bottom: .4rem; }
 @media (max-width: 760px) {
