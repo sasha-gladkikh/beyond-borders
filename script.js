@@ -92,7 +92,7 @@ orgTabs.forEach((tab, index) => {
 });
 
 const hash = window.location.hash.replace("#", "");
-if (hash === "ucla" || hash === "usc" || hash === "university") {
+if (["ucla", "usc", "csuf", "ucsb", "csulb", "university"].includes(hash)) {
   showOrg("university");
   document.getElementById("chapters")?.scrollIntoView();
 } else if (["national", "hs"].includes(hash)) {
@@ -139,7 +139,9 @@ updateInquiry();
 const campuses = [
   { id:'ucla', label:'UCLA', coords:[34.0689,-118.4452] },
   { id:'usc', label:'USC', coords:[34.0224,-118.2851] },
-  { id:'csuf', label:'Cal State Fullerton', coords:[33.8829,-117.8854] }
+  { id:'csuf', label:'Cal State Fullerton', coords:[33.8829,-117.8854] },
+  { id:'ucsb', label:'UCSB', coords:[34.4139,-119.8489] },
+  { id:'csulb', label:'CSULB', coords:[33.7838,-118.1141] }
 ];
 const campusMarkers = {};
 function selectCampus(id) {

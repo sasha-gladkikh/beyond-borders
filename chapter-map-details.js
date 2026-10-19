@@ -8,15 +8,17 @@
   const eyebrow = document.createElement('p'); eyebrow.className = 'eyebrow'; eyebrow.textContent = 'University chapter';
   const title = document.createElement('h3'); title.textContent = `Beyond Borders at ${campus.label}`;
   const location = document.createElement('p'); location.className = 'map-card-location'; location.textContent = card.querySelector('.chapter-location').textContent;
-  const leader = document.createElement('p'); leader.className = 'map-card-leader'; leader.textContent = `President · ${card.querySelector('.board-name').textContent.trim()}`;
+  const president = card.querySelector('.board-name').textContent.trim();
+  const leader = document.createElement('p'); leader.className = 'map-card-leader'; leader.textContent = president ? `President · ${president}` : 'President';
   const join = card.querySelector('.chapter-join').cloneNode(true); join.className = 'map-card-join'; join.textContent = 'Join this chapter';
   join.addEventListener('click', () => {
    form.querySelector('[name="Area of interest"]').value = 'Join a chapter';
    form.querySelector('[name="Chapter affiliation"]').value = join.dataset.chapter;
    updateInquiry();
   });
-  const social = card.querySelector('.ig a').cloneNode(true); social.className = 'map-card-social';
-  detail.replaceChildren(eyebrow, title, location, leader, join, social);
+  const social = card.querySelector('.ig a')?.cloneNode(true);
+  if (social) social.className = 'map-card-social';
+  detail.replaceChildren(eyebrow, title, location, leader, join, ...(social ? [social] : []));
  }
  document.addEventListener('chapter-selected', event => {
   const id = event.detail.id; renderChapter(id);
